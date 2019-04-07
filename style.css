@@ -91,11 +91,51 @@ body {
     color: var(--white);
     font-size: 2vw;
     text-shadow: 0 .2vw 0 black;
-    transition: all .5s;
-    border-color: var(--alt-color-1);
+    transition: all .5s;  
     width: 25%;
     height: 90%;
 }
+
+.answer-image img { 
+    border-color: var(--alt-color-1);
+    height: 100%;
+    width: 100%;
+}
+
+label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 0.083em solid var(--alt-color-1);
+    align-items: center;
+}
+
+.answer-image p {
+    position: absolute;
+    top: 25%;
+}
+
+.answer-text {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+label input[type="radio"]:checked + img {
+    border: 0.1em solid var(--alt-color-2);
+}
+
+.answer-text input[type="radio"]:checked {
+    
+}
+
+
+
+
+input[type="radio"] {
+    display: none;
+}
+
 .answer-text {
     background-color: var(--dominant-color);
     color: var(--white);
@@ -109,7 +149,7 @@ body {
     background-image: url(images/menu.jpg);
     background-size: 100% 100%;
 }
-
+/*
 #q1-a1 {
     background-image: url(images/salad.jpg);
     background-size: 100% 100%;
@@ -126,6 +166,7 @@ body {
     background-image: url(images/pizza.jpg);
     background-size: 100% 100%;
 }
+*/
 
 .question.question-2 {
     background-image: url(images/friends.jpg);
