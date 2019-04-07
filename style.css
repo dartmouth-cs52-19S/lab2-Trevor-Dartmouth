@@ -34,11 +34,13 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    font-size: 1.8vw;
+    font-family: 'Gloria Hallelujah', cursive;
     color: var(--white);
     border-bottom: 0.083em solid var(--alt-color-1);
     background-color: var(--dominant-color);
     width: 100%;
-    height: 10%;
+    height: 15%;
 }
 
 .text-question {
@@ -93,9 +95,20 @@ body {
     transition: all .5s;
     border-color: var(--alt-color-1);
     width: 30%;
-    height: 80%;
+    height: 60%;
 }
-
+.text-question.question-1 {
+    background-image: url(images/friends.jpg);
+    background-size: 100% 100%;
+}
+.text-question.question-2 {
+    background-image: url(images/night.jpg);
+    background-size: 100% 100%;
+}
+.text-question.question-3 {
+    background-image: url(images/breakfast.jpg);
+    background-size: 100% 100%;
+}
 .answer-button:hover {
     background-color: var(--alt-color-2);
 }
