@@ -43,7 +43,7 @@ body {
     height: 15%;
 }
 
-.text-question {
+.question {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -66,7 +66,7 @@ body {
     border: 0.083em solid var(--alt-color-1);
 }
 
-.text-answers {
+.answers {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -87,8 +87,16 @@ body {
     width: 100%;
     height: 100%;
 }
-
-.answer-button {
+.answer-image { 
+    color: var(--white);
+    font-size: 2vw;
+    text-shadow: 0 .2vw 0 black;
+    transition: all .5s;
+    border-color: var(--alt-color-1);
+    width: 25%;
+    height: 90%;
+}
+.answer-text {
     background-color: var(--dominant-color);
     color: var(--white);
     font-size: 2vw;
@@ -97,23 +105,89 @@ body {
     width: 30%;
     height: 60%;
 }
-.text-question.question-1 {
+.question.question-1 {
+    background-image: url(images/menu.jpg);
+    background-size: 100% 100%;
+}
+
+#q1-a1 {
+    background-image: url(images/salad.jpg);
+    background-size: 100% 100%;
+}
+#q1-a2 {
+    background-image: url(images/ma-thayers.jpg);
+    background-size: 100% 100%;
+}
+#q1-a3 {
+    background-image: url(images/world-view.jpg);
+    background-size: 100% 100%;
+}
+#q1-a4 {
+    background-image: url(images/pizza.jpg);
+    background-size: 100% 100%;
+}
+
+.question.question-2 {
     background-image: url(images/friends.jpg);
     background-size: 100% 100%;
 }
-.text-question.question-2 {
+.question.question-3 {
+    background-image: url(images/cafe.jpg);
+    background-size: 100% 100%;
+}
+
+#q3-a1 {
+    background-image: url(images/sushi.jpg);
+    background-size: 100% 100%;
+}
+#q3-a2 {
+    background-image: url(images/pasta.jpg);
+    background-size: 100% 100%;
+}
+#q3-a3 {
+    background-image: url(images/stir-fry.jpg);
+    background-size: 100% 100%;
+}
+#q3-a4 {
+    background-image: url(images/smoothie.jpg);
+    background-size: 100% 100%;
+}
+.question.question-4 {
     background-image: url(images/night.jpg);
     background-size: 100% 100%;
 }
-.text-question.question-3 {
-    background-image: url(images/breakfast.jpg);
+.question.question-5 {
+    background-image: url(images/restaurant.jpg);
     background-size: 100% 100%;
 }
-.answer-button:hover {
+
+#q5-a1 {
+    background-image: url(images/breakfast-2.jpg);
+    background-size: 100% 100%;
+}
+#q5-a2 {
+    background-image: url(images/lunch.jpg);
+    background-size: 100% 100%;
+}
+#q5-a3 {
+    background-image: url(images/dinner.jpg);
+    background-size: 100% 100%;
+}
+#q5-a4 {
+    background-image: url(images/late-night.jpg);
+    background-size: 100% 100%;
+}
+.question.question-6 {
+    background-image: url(images/breakfast-1.jpg);
+    background-size: 100% 100%;
+}
+
+
+.answer-text:hover {
     background-color: var(--alt-color-2);
 }
 
-.answer-button:active {
+.answer-text:active {
     background-color: var(--alt-color-2);
 }
 
