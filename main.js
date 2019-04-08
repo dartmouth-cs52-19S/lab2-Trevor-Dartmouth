@@ -2,35 +2,35 @@
 
 var answerScores = {
 
-    Salad: 1,
-    Thayers: 4,
-    World: 3,
-    Pizza: 2,
+    Salad1: 1,
+    Thayers1: 4,
+    World1: 3,
+    Pizza1: 2,
 
     Hop2: 3,
     Foco2: 2,
     Collis2: 4,
     KAF2: 1,
 
-    Sushi: 4,
-    Pasta: 1,
-    StirFry: 3,
-    Smoothie: 2,
+    Sushi3: 4,
+    Pasta3: 1,
+    StirFry3: 3,
+    Smoothie3: 2,
 
     Collis4: 1,
     Novack4: 4,
     Hop4: 3,
-    SnackBar: 2,
+    SnackBar4: 2,
 
-    Breakfast: 4,
-    Lunch: 2,
-    Dinner: 1,
-    LateNight: 3,
+    Breakfast5: 4,
+    Lunch5: 2,
+    Dinner5: 1,
+    LateNight5: 3,
 
     Foco6: 2,
     Collis6: 3,
     Hop6: 4,
-    None: 1,
+    None6: 1,
 };
 
 
@@ -38,6 +38,16 @@ var answerScores = {
 $(".answer-image").on( "click", imageListener);
 $(".answer-text").on( "click", textListener);
 $(".done-button").on("click", doneListener);
+
+$(".try-again").on("click", function(){
+    if (($(".try-again").attr("finished")) === "true") {
+        window.location.href=window.location.href;
+    }
+    else {
+         modal.css("display", "none");
+    }
+    
+});
 
 function imageListener(e) {
     $('.answer-image input[type="radio"]:checked').parent().css("border", "0.1em solid var(--alt-color-2)");
@@ -57,27 +67,46 @@ function textListener(e) {
 function doneListener(e) {
     var values = $('input:radio:checked').map(function(i, el){return $(el).val();}).get();
     var result = determineResults(values);
-    $(".results h3").html(result);
+    if (result !== null) {
+        $(".modal-header h2").text("Based off your DDS choices, the 7 you are most like is...");
+        $(".modal-body p").text(result);
+        $(".try-again").text("Try Again");
+        $(".try-again").attr("finished", true);
+    }
+    else {
+        $(".modal-header h2").text("");
+        $(".modal-body p").text("Please Fill In All Questions");
+        $(".try-again").text("Review Answers");
+        $(".try-again").attr("finished", false);
+    }
 }
 
 function determineResults(values) {
-    var sum = findTotalScore(values);
-    switch (true) {
-        case (sum < 7):
-            return "The Stacks";
-        case (sum < 10):
-            return "BEMA";
-        case (sum < 13):
-            return "Top of the Hop";
-        case (sum < 16):
-            return "50 Yard Line";
-        case (sum < 19):
-            return "Steps of Dartmouth Hall";
-        case (sum < 21):
-            return "Middle of the Green";
-        case (sum < 25):
-            return "President's Lawn";
+    if ($(".question").length === values.length) {
+        var sum = findTotalScore(values);
+        switch (true) {
+            case (sum < 7):
+                return "The Stacks";
+            case (sum < 10):
+                return "BEMA";
+            case (sum < 13):
+                return "Top of the Hop";
+            case (sum < 16):
+                return "50 Yard Line";
+            case (sum < 19):
+                return "Steps of Dartmouth Hall";
+            case (sum < 21):
+                return "Middle of the Green";
+            case (sum < 25):
+                return "President's Lawn";
+            default: 
+                return null;
+        }
+    } 
+    else {
+        return null;
     }
+    
 }
 
 function findTotalScore(values) {
@@ -108,5 +137,6 @@ window.addEventListener("click", function(event) {
       }
 });
 
+//TODO: Error Checking
 
 

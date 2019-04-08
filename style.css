@@ -205,6 +205,8 @@ input[type="radio"] {
   /* Modal Content */
 .modal-content {
     position: relative;
+    display: flex;
+    flex-direction: column;
     background-color: var(--white);
     margin: auto;
     padding: 0;
@@ -238,22 +240,43 @@ input[type="radio"] {
   
 .modal-header {
     padding: 2px 16px;
+    flex-basis: 20%;
     text-align: center;
     background-color: var(--secondary-color);
     color: white;
 }
   
-.modal-body {padding: 2px 16px;}
+.modal-body {
+    display: flex;
+    flex-basis: 60%;
+    flex-direction: row;
+    justify-content: center;
+    padding: 2px 16px;
+}
+.modal-body p {
+    font-size: 3vw;
+}
   
 .modal-footer {
     display: flex;
     flex-direction: row;
+    flex-basis: 20%;
     justify-content: center;
     padding: 2px 16px;
     background-color: var(--secondary-color);
     text-align: center;
     color: white;
 }
-.modal-footer .try-again {
-    justify-self: flex-end; 
+.try-again {
+    background-color: var(--dominant-color);
+    color: var(--white);
+    font-size: 2vw;
+    transition: all .5s;
+    border-color: var(--alt-color-1);
+    width: 50%;
+    height: 70%;
 }
+.try-again:hover {
+    background-color: var(--alt-color-2);
+}
+
