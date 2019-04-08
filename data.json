@@ -1,0 +1,162 @@
+{
+    "title": "Which of the 7 are you?",
+    "icon": "icons/dartmouth-icon.ico",
+    "questions": [
+        {
+            "question_name": "question1",
+            "question_type": "image",
+            "question_text": "Where do you get your food from in Foco?",
+            "question_img_url": "images/menu.jpg",
+            "answers": [
+                {
+                    "text": "Salad",
+                    "img_url": "images/salad.jpg",
+                    "value": "Salad1"
+                },
+                {
+                    "text": "Ma Thayers",
+                    "img_url": "images/ma-thayers.jpg",
+                    "outcome": "Thayers1"
+                },
+                {
+                    "text": "World View",
+                    "img_url": "images/world-view.jpg",
+                    "outcome": "World1"
+                },
+                {
+                    "text": "Pizza",
+                    "img_url": "images/pizza.jpg",
+                    "outcome": "Pizza1"
+                }
+            ]
+        },
+        {
+            "question_name": "question2",
+            "question_type": "text",
+            "question_text": "Where is your favorite place to eat with friends?",
+            "question_img_url": "images/friends.jpg",
+            "answers": [
+                {
+                    "text": "The Hop",
+                    "value": "Hop2"
+                },
+                {
+                    "text": "Foco",
+                    "outcome": "Foco2"
+                },
+                {
+                    "text": "Collis",
+                    "outcome": "Collis2"
+                },
+                {
+                    "text": "KAF",
+                    "outcome": "KAF2"
+                }
+            ]
+        },
+        {
+            "question_name": "question3",
+            "question_type": "image",
+            "question_text": "What's your favorite thing in Collis?",
+            "question_img_url": "images/cafe.jpg",
+            "answers": [
+                {
+                    "text": "Sushi",
+                    "img_url": "images/sushi.jpg",
+                    "value": "Sushi3"
+                },
+                {
+                    "text": "Pasta",
+                    "img_url": "images/pasta.jpg",
+                    "outcome": "Pasta3"
+                },
+                {
+                    "text": "Stir Fry",
+                    "img_url": "images/stir-fry.jpg",
+                    "outcome": "StirFry3"
+                },
+                {
+                    "text": "Smoothie",
+                    "img_url": "images/smoothie.jpg",
+                    "outcome": "Smoothie3"
+                }
+            ]
+        },
+        {
+            "question_name": "question4",
+            "question_type": "text",
+            "question_text": "What is your go-to late night snack?",
+            "question_img_url": "images/night.jpg",
+            "answers": [
+                {
+                    "text": "Collis",
+                    "value": "Collis4"
+                },
+                {
+                    "text": "Novack",
+                    "outcome": "Novack4"
+                },
+                {
+                    "text": "The Hop",
+                    "outcome": "Hop4"
+                },
+                {
+                    "text": "Snack Bar",
+                    "outcome": "SnackBar4"
+                }
+            ]
+        },
+        {
+            "question_name": "question5",
+            "question_type": "image",
+            "question_text": "What meal do you eat the most through DDS?",
+            "question_img_url": "images/restaurant.jpg",
+            "answers": [
+                {
+                    "text": "Breakfast",
+                    "img_url": "images/breakfast-2.jpg",
+                    "value": "Breakfast5"
+                },
+                {
+                    "text": "Lunch",
+                    "img_url": "images/lunch.jpg",
+                    "outcome": "Lunch5"
+                },
+                {
+                    "text": "Dinner",
+                    "img_url": "images/dinner.jpg",
+                    "outcome": "Dinner5"
+                },
+                {
+                    "text": "Late Night",
+                    "img_url": "images/late-night.jpg",
+                    "outcome": "LateNight5"
+                }
+            ]
+        },
+        {
+            "question_name": "question6",
+            "question_type": "text",
+            "question_text": "Where is your favorite place to eat breakfast?",
+            "question_img_url": "images/breakfast-1.jpg",
+            "answers": [
+                {
+                    "text": "Foco",
+                    "value": "Foco6"
+                },
+                {
+                    "text": "Collis",
+                    "outcome": "Collis6"
+                },
+                {
+                    "text": "The Hop",
+                    "outcome": "Hop6"
+                },
+                {
+                    "text": "I don't eat breakfast",
+                    "outcome": "None6"
+                }
+            ]
+        }
+    ]
+}
