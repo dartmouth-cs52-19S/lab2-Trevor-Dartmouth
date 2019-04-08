@@ -115,28 +115,14 @@ label {
     top: 25%;
 }
 
-.answer-text {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
-
-label input[type="radio"]:checked + img {
-    border: 0.1em solid var(--alt-color-2);
-}
-
-.answer-text input[type="radio"]:checked {
-    
-}
-
-
-
-
 input[type="radio"] {
     display: none;
 }
 
 .answer-text {
+    display: flex;
+    justify-content: center;
+    align-content: center;
     background-color: var(--dominant-color);
     color: var(--white);
     font-size: 2vw;
@@ -145,28 +131,13 @@ input[type="radio"] {
     width: 30%;
     height: 60%;
 }
+.answer-text:hover {
+    background-color: var(--alt-color-2);
+}
 .question.question-1 {
     background-image: url(images/menu.jpg);
     background-size: 100% 100%;
 }
-/*
-#q1-a1 {
-    background-image: url(images/salad.jpg);
-    background-size: 100% 100%;
-}
-#q1-a2 {
-    background-image: url(images/ma-thayers.jpg);
-    background-size: 100% 100%;
-}
-#q1-a3 {
-    background-image: url(images/world-view.jpg);
-    background-size: 100% 100%;
-}
-#q1-a4 {
-    background-image: url(images/pizza.jpg);
-    background-size: 100% 100%;
-}
-*/
 
 .question.question-2 {
     background-image: url(images/friends.jpg);
@@ -177,22 +148,6 @@ input[type="radio"] {
     background-size: 100% 100%;
 }
 
-#q3-a1 {
-    background-image: url(images/sushi.jpg);
-    background-size: 100% 100%;
-}
-#q3-a2 {
-    background-image: url(images/pasta.jpg);
-    background-size: 100% 100%;
-}
-#q3-a3 {
-    background-image: url(images/stir-fry.jpg);
-    background-size: 100% 100%;
-}
-#q3-a4 {
-    background-image: url(images/smoothie.jpg);
-    background-size: 100% 100%;
-}
 .question.question-4 {
     background-image: url(images/night.jpg);
     background-size: 100% 100%;
@@ -202,33 +157,103 @@ input[type="radio"] {
     background-size: 100% 100%;
 }
 
-#q5-a1 {
-    background-image: url(images/breakfast-2.jpg);
-    background-size: 100% 100%;
-}
-#q5-a2 {
-    background-image: url(images/lunch.jpg);
-    background-size: 100% 100%;
-}
-#q5-a3 {
-    background-image: url(images/dinner.jpg);
-    background-size: 100% 100%;
-}
-#q5-a4 {
-    background-image: url(images/late-night.jpg);
-    background-size: 100% 100%;
-}
 .question.question-6 {
     background-image: url(images/breakfast-1.jpg);
     background-size: 100% 100%;
 }
 
+.done-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    width: 100%;
+    height: 15%;
+}
+.done-button {
+    background-color: var(--dominant-color);
+    border: 0.03em solid var(--alt-color-1);
+    align-self: center;
+    color: var(--white);
+    font-size: 5vw;
+    height: 90%;
+    width: 60%;
+    transition: all .5s;
+    white-space: nowrap;
+}
 
-.answer-text:hover {
+.done-button:hover {
     background-color: var(--alt-color-2);
 }
 
-.answer-text:active {
-    background-color: var(--alt-color-2);
-}
 
+/* adapted from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal2 */
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    padding-top: 10%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4)
+}
+  
+  /* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: var(--white);
+    margin: auto;
+    padding: 0;
+    border: 1px solid var(--alt-color-1);
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+  
+/* Add Animation */
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+  
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+  
+.modal-header {
+    padding: 2px 16px;
+    text-align: center;
+    background-color: var(--secondary-color);
+    color: white;
+}
+  
+.modal-body {padding: 2px 16px;}
+  
+.modal-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 2px 16px;
+    background-color: var(--secondary-color);
+    text-align: center;
+    color: white;
+}
+.modal-footer .try-again {
+    justify-self: flex-end; 
+}

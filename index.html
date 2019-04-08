@@ -52,21 +52,21 @@
         <div class="answers">
             <div class="answer-row">
                 <label class="answer-text">
-                    <input type="radio" name="question-2" value="Hop" />
+                    <input type="radio" name="question-2" value="Hop2" />
                     <p>The Hop</p>
                 </label>
                 <label class="answer-text">
-                    <input type="radio" name="question-2" value="Foco" />
+                    <input type="radio" name="question-2" value="Foco2" />
                     <p>Foco</p>
                 </label>
             </div>
             <div class="answer-row">
                 <label class="answer-text">
-                    <input type="radio" name="question-2" value="Collis" />
+                    <input type="radio" name="question-2" value="Collis2" />
                     <p>Collis</p>
                 </label>
                 <label class="answer-text">
-                    <input type="radio" name="question-2" value="KAF" />
+                    <input type="radio" name="question-2" value="KAF2" />
                     <p>KAF</p>
                 </label>
             </div>
@@ -91,7 +91,7 @@
             </div>
             <div class="answer-row">
                 <label class="answer-image">
-                    <input type="radio" name="question-3" value="Stir Fry" />
+                    <input type="radio" name="question-3" value="StirFry" />
                     <img src="images/stir-fry.jpg" />
                     <p>Stir Fry</p>
                 </label>
@@ -110,21 +110,21 @@
         <div class="answers">
             <div class="answer-row">
                 <label class="answer-text">
-                    <input type="radio" name="question-4" value="Collis" />
+                    <input type="radio" name="question-4" value="Collis4" />
                     <p>Collis</p>
                 </label>
                 <label class="answer-text">
-                    <input type="radio" name="question-4" value="Novack" />
+                    <input type="radio" name="question-4" value="Novack4" />
                     <p>Novack</p>
                 </label>
             </div>
             <div class="answer-row">
                 <label class="answer-text">
-                    <input type="radio" name="question-4" value="Hop" />
+                    <input type="radio" name="question-4" value="Hop4" />
                     <p>The Hop</p>
                 </label>
                 <label class="answer-text">
-                    <input type="radio" name="question-4" value="Snack Bar" />
+                    <input type="radio" name="question-4" value="SnackBar" />
                     <p>Snack Bar</p>
                 </label>
             </div>
@@ -154,39 +154,67 @@
                     <p>Dinnner</p>
                 </label>
                 <label class="answer-image">
-                    <input type="radio" name="question-5" value="Late Night" />
+                    <input type="radio" name="question-5" value="LateNight" />
                     <img src="images/late-night.jpg" />
                     <p>Late Night</p>
                 </label>
             </div>
         </div>
     </div>
-    <div class="question question-4">
+    <div class="question question-6">
         <div class="question-box">
             <h3>Where is your favorite place to eat breakfast?</h3>
         </div>
         <div class="answers">
             <div class="answer-row">
                 <label class="answer-text">
-                    <input type="radio" name="question-6" value="Foco" />
+                    <input type="radio" name="question-6" value="Foco6" />
                     <p>Foco</p>
                 </label>
                 <label class="answer-text">
-                    <input type="radio" name="question-6" value="Collis" />
+                    <input type="radio" name="question-6" value="Collis6" />
                     <p>Collis</p>
                 </label>
             </div>
             <div class="answer-row">
                 <label class="answer-text">
-                    <input type="radio" name="question-6" value="Hop" />
+                    <input type="radio" name="question-6" value="Hop6" />
                     <p>The Hop</p>
                 </label>
                 <label class="answer-text">
-                    <input type="radio" name="question-6" value="N/A" />
+                    <input type="radio" name="question-6" value="None" />
                     <p>I don't eat breakfast</p>
                 </label>
             </div>
         </div>
     </div>
+    <div class="done-button-container">
+        <button class="done-button">Show me my results!</button>
+    </div>
+
+    <!--Adapted From https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal2-->
+    <div id="answerModal" class="modal">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Based off your DDS choices you are...</h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+            <div class="modal-footer">
+                <div class="results" id="result">
+                    <h3>Modal Footer</h3>
+                </div>
+                <button class="try-again">Try Again?</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="main.js"></script>
 </body>
