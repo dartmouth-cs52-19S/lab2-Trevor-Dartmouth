@@ -8,6 +8,9 @@
     --white : rgba(255 , 255 , 255, 1);
     --black : rgba(0, 0, 0, 1);
 }
+html {
+    scroll-behavior: smooth;
+}
 
 html, body {
     width: 100%;
@@ -137,36 +140,9 @@ input[type="radio"] {
 .answer-text:hover {
     background-color: var(--alt-color-2) !important;
 }
-.question.question-1 {
-    background-image: url(images/menu.jpg);
-    background-size: 100% 100%;
-}
-
-.question.question-2 {
-    background-image: url(images/friends.jpg);
-    background-size: 100% 100%;
-}
-.question.question-3 {
-    background-image: url(images/cafe.jpg);
-    background-size: 100% 100%;
-}
-
-.question.question-4 {
-    background-image: url(images/night.jpg);
-    background-size: 100% 100%;
-}
-.question.question-5 {
-    background-image: url(images/restaurant.jpg);
-    background-size: 100% 100%;
-}
-
-.question.question-6 {
-    background-image: url(images/breakfast-1.jpg);
-    background-size: 100% 100%;
-}
 
 .done-button-container {
-    display: flex;
+    display: none;
     flex-direction: row;
     justify-content: center;
     background-color: var(--secondary-color);
@@ -195,10 +171,11 @@ input[type="radio"] {
 .modal {
     display: none;
     position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     z-index: 10;
     padding-top: 5%;
-    left: 0;
-    top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
@@ -215,6 +192,7 @@ input[type="radio"] {
     padding: 0;
     border: 1px solid var(--alt-color-1);
     width: 80%;
+    max-height: 80%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     animation-name: animatetop;
     animation-duration: 0.4s
@@ -242,7 +220,7 @@ input[type="radio"] {
 }
   
 .modal-header {
-    padding: 2px 16px;
+    padding: 1% 2%;
     flex-basis: 20%;
     text-align: center;
     background-color: var(--secondary-color);
@@ -255,7 +233,7 @@ input[type="radio"] {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2px 16px;
+    padding: 1% 2%;
 }
 .modal-body p {
     font-size: 4vw;
@@ -263,7 +241,7 @@ input[type="radio"] {
 .modal-body img {
     width: 40%;
     margin-top: 3%;
-    height: 20%;
+    height: 40%;
 }
   
 .modal-footer {
@@ -271,7 +249,7 @@ input[type="radio"] {
     flex-direction: row;
     flex-basis: 20%;
     justify-content: center;
-    padding: 2px 16px;
+    padding: 1% 2%;
     background-color: var(--secondary-color);
     text-align: center;
     color: white;

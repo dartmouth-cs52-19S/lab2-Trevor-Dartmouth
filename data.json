@@ -1,6 +1,4 @@
 {
-    "title": "Which of the 7 are you?",
-    "icon": "icons/dartmouth-icon.ico",
     "questions": [
         {
             "question_number": "1",
@@ -16,17 +14,17 @@
                 {
                     "text": "Ma Thayers",
                     "img_url": "images/ma-thayers.jpg",
-                    "outcome": "Thayers1"
+                    "value": "Thayers1"
                 },
                 {
                     "text": "World View",
                     "img_url": "images/world-view.jpg",
-                    "outcome": "World1"
+                    "value": "World1"
                 },
                 {
                     "text": "Pizza",
                     "img_url": "images/pizza.jpg",
-                    "outcome": "Pizza1"
+                    "value": "Pizza1"
                 }
             ]
         },
@@ -42,15 +40,15 @@
                 },
                 {
                     "text": "Foco",
-                    "outcome": "Foco2"
+                    "value": "Foco2"
                 },
                 {
                     "text": "Collis",
-                    "outcome": "Collis2"
+                    "value": "Collis2"
                 },
                 {
                     "text": "KAF",
-                    "outcome": "KAF2"
+                    "value": "KAF2"
                 }
             ]
         },
@@ -68,17 +66,17 @@
                 {
                     "text": "Pasta",
                     "img_url": "images/pasta.jpg",
-                    "outcome": "Pasta3"
+                    "value": "Pasta3"
                 },
                 {
                     "text": "Stir Fry",
                     "img_url": "images/stir-fry.jpg",
-                    "outcome": "StirFry3"
+                    "value": "StirFry3"
                 },
                 {
                     "text": "Smoothie",
                     "img_url": "images/smoothie.jpg",
-                    "outcome": "Smoothie3"
+                    "value": "Smoothie3"
                 }
             ]
         },
@@ -94,15 +92,15 @@
                 },
                 {
                     "text": "Novack",
-                    "outcome": "Novack4"
+                    "value": "Novack4"
                 },
                 {
                     "text": "The Hop",
-                    "outcome": "Hop4"
+                    "value": "Hop4"
                 },
                 {
                     "text": "Snack Bar",
-                    "outcome": "SnackBar4"
+                    "value": "SnackBar4"
                 }
             ]
         },
@@ -120,17 +118,17 @@
                 {
                     "text": "Lunch",
                     "img_url": "images/lunch.jpg",
-                    "outcome": "Lunch5"
+                    "value": "Lunch5"
                 },
                 {
                     "text": "Dinner",
                     "img_url": "images/dinner.jpg",
-                    "outcome": "Dinner5"
+                    "value": "Dinner5"
                 },
                 {
                     "text": "Late Night",
                     "img_url": "images/late-night.jpg",
-                    "outcome": "LateNight5"
+                    "value": "LateNight5"
                 }
             ]
         },
@@ -146,15 +144,15 @@
                 },
                 {
                     "text": "Collis",
-                    "outcome": "Collis6"
+                    "value": "Collis6"
                 },
                 {
                     "text": "The Hop",
-                    "outcome": "Hop6"
+                    "value": "Hop6"
                 },
                 {
                     "text": "I don't eat breakfast",
-                    "outcome": "None6"
+                    "value": "None6"
                 }
             ]
         }

@@ -1,215 +1,38 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Which of the 7 are you?</title>
 
-<head>
-    <meta charset="utf-8" />
-    <title>Which of the 7 are you?</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="icon" href="icons/dartmouth-icon.ico">
+        <link href="https://fonts.googleapis.com/css?family=Poppins|Gloria+Hallelujah" rel="stylesheet">
+    </head>
 
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="icon" href="icons/dartmouth-icon.ico">
-    <link href="https://fonts.googleapis.com/css?family=Poppins|Gloria+Hallelujah" rel="stylesheet">
-</head>
-
-<body>
-    <div class="top-header" id="start">
-        <h2>Which of the Dartmouth 7 are you based off your DDS preferences</h2>
-    </div>
-    <div class="question question-1" id="q1">
-        <div class="question-box">
-            <h3>Where do you get your food from in Foco?</h3>
+    <body>
+        <div class="top-header" id="start">
+            <h2>Which of the Dartmouth 7 are you based off your DDS preferences</h2>
         </div>
-        <div class="answers">
-            <div class="answer-row">
-                <label class="answer-image question-1">
-                    <input type="radio" name="question-1" value="Salad1" />
-                    <img src="images/salad.jpg" />
-                    <p>Salad</p>
-                </label>
-                <label class="answer-image question-1">
-                    <input type="radio" name="question-1" value="Thayers1" />
-                    <img src="images/ma-thayers.jpg" />
-                    <p>Ma Thayers</p>
-                </label>
-            </div>
-            <div class="answer-row">
-                <label class="answer-image question-1">
-                    <input type="radio" name="question-1" value="World1" />
-                    <img src="images/world-view.jpg" />
-                    <p>World View</p>
-                </label>
-                <label class="answer-image question-1">
-                    <input type="radio" name="question-1" value="Pizza1" />
-                    <img src="images/pizza.jpg" />
-                    <p>Pizza</p>
-                </label>
-            </div>
-        </div>
-    </div>
-    <div class="question question-2" id="q2">
-        <div class="question-box">
-            <h3>Where is your favorite place to eat with friends?</h3>
-        </div>
-        <div class="answers">
-            <div class="answer-row">
-                <label class="answer-text question-2">
-                    <input type="radio" name="question-2" value="Hop2" />
-                    <p>The Hop</p>
-                </label>
-                <label class="answer-text question-2">
-                    <input type="radio" name="question-2" value="Foco2" />
-                    <p>Foco</p>
-                </label>
-            </div>
-            <div class="answer-row">
-                <label class="answer-text question-2">
-                    <input type="radio" name="question-2" value="Collis2" />
-                    <p>Collis</p>
-                </label>
-                <label class="answer-text question-2">
-                    <input type="radio" name="question-2" value="KAF2" />
-                    <p>KAF</p>
-                </label>
-            </div>
-        </div>
-    </div>
-    <div class="question question-3" id="q3">
-        <div class="question-box">
-            <h3>What's your favorite thing in Collis?</h3>
-        </div>
-        <div class="answers">
-            <div class="answer-row">
-                <label class="answer-image question-3">
-                    <input type="radio" name="question-3" value="Sushi3" />
-                    <img src="images/sushi.jpg" />
-                    <p>Sushi</p>
-                </label>
-                <label class="answer-image question-3">
-                    <input type="radio" name="question-3" value="Pasta3" />
-                    <img src="images/pasta.jpg" />
-                    <p>Pasta</p>
-                </label>
-            </div>
-            <div class="answer-row">
-                <label class="answer-image question-3">
-                    <input type="radio" name="question-3" value="StirFry3" />
-                    <img src="images/stir-fry.jpg" />
-                    <p>Stir Fry</p>
-                </label>
-                <label class="answer-image question-3">
-                    <input type="radio" name="question-3" value="Smoothie3" />
-                    <img src="images/smoothie.jpg" />
-                    <p>Smoothie</p>
-                </label>
-            </div>
-        </div>
-    </div>
-    <div class="question question-4" id="q4">
-        <div class="question-box">
-            <h3>What is your go-to late night snack?</h3>
-        </div>
-        <div class="answers">
-            <div class="answer-row">
-                <label class="answer-text question-4">
-                    <input type="radio" name="question-4" value="Collis4" />
-                    <p>Collis</p>
-                </label>
-                <label class="answer-text question-4">
-                    <input type="radio" name="question-4" value="Novack4" />
-                    <p>Novack</p>
-                </label>
-            </div>
-            <div class="answer-row">
-                <label class="answer-text question-4">
-                    <input type="radio" name="question-4" value="Hop4" />
-                    <p>The Hop</p>
-                </label>
-                <label class="answer-text question-4">
-                    <input type="radio" name="question-4" value="SnackBar4" />
-                    <p>Snack Bar</p>
-                </label>
-            </div>
-        </div>
-    </div>
-    <div class="question question-5" id="q5">
-        <div class="question-box">
-            <h3>What meal do you eat the most through DDS?</h3>
-        </div>
-        <div class="answers">
-            <div class="answer-row">
-                <label class="answer-image question-5">
-                    <input type="radio" name="question-5" value="Breakfast5" />
-                    <img src="images/breakfast-2.jpg" />
-                    <p>Breakfast</p>
-                </label>
-                <label class="answer-image question-5">
-                    <input type="radio" name="question-5" value="Lunch5" />
-                    <img src="images/lunch.jpg" />
-                    <p>Lunch</p>
-                </label>
-            </div>
-            <div class="answer-row">
-                <label class="answer-image question-5">
-                    <input type="radio" name="question-5" value="Dinner5" />
-                    <img src="images/dinner.jpg" />
-                    <p>Dinnner</p>
-                </label>
-                <label class="answer-image question-5">
-                    <input type="radio" name="question-5" value="LateNight5" />
-                    <img src="images/late-night.jpg" />
-                    <p>Late Night</p>
-                </label>
-            </div>
-        </div>
-    </div>
-    <div class="question question-6" id="q6">
-        <div class="question-box">
-            <h3>Where is your favorite place to eat breakfast?</h3>
-        </div>
-        <div class="answers">
-            <div class="answer-row">
-                <label class="answer-text question-6">
-                    <input type="radio" name="question-6" value="Foco6" />
-                    <p>Foco</p>
-                </label>
-                <label class="answer-text question-6">
-                    <input type="radio" name="question-6" value="Collis6" />
-                    <p>Collis</p>
-                </label>
-            </div>
-            <div class="answer-row">
-                <label class="answer-text question-6">
-                    <input type="radio" name="question-6" value="Hop6" />
-                    <p>The Hop</p>
-                </label>
-                <label class="answer-text question-6">
-                    <input type="radio" name="question-6" value="None6" />
-                    <p>I don't eat breakfast</p>
-                </label>
-            </div>
-        </div>
-    </div>
-    <div class="done-button-container" id="finish">
-        <button class="done-button">Show me my results!</button>
-    </div>
-
-    <!--Adapted From https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal2-->
-    <div id="answerModal" class="modal">
-
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="close">&times;</span>
-                <h2>Based off your DDS choices, the 7 you are most like is...</h2>
-            </div>
-            <div class="modal-body">
-            </div>
-            <div class="modal-footer">
-                <button class="try-again" finished = true>Try Again?</button>
-            </div>
+        <div class="done-button-container" id="finish">
+            <button class="done-button">Show me my results!</button>
         </div>
 
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
-</body>
+        <!--Adapted From https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal2-->
+        <div id="answerModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>Based off your DDS choices, the 7 you are most like is...</h2>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button class="try-again" finished= true>Try Again?</button>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
