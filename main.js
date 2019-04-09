@@ -226,17 +226,17 @@ function determineResults(values) {
     if ($(".question").length === values.length) {
         var sum = findTotalScore(values);
         switch (true) {
-            case (sum < 10):
+            case (sum < 11):
                 return "Stacks";
-            case (sum < 12):
+            case (sum < 13):
                 return "BEMA";
-            case (sum < 14):
+            case (sum < 15):
                 return "Hop";
             case (sum < 16):
                 return "Yard";
-            case (sum < 18):
+            case (sum < 17):
                 return "Hall";
-            case (sum < 20):
+            case (sum < 19):
                 return "Green";
             case (sum < 25):
                 return "Lawn";
@@ -271,9 +271,8 @@ $(".close").on("click", function () {
 });
 $(".try-again").on("click", function() {
     if (($(".try-again").attr("finished")) === "true") {
-        location.href = "#top";
         modal.css("display", "none");
-        location.reload();
+        window.location = window.location.pathname;
     }
     else {
         location.href = "#top";

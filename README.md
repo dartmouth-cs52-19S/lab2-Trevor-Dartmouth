@@ -19,3 +19,7 @@ I chose to go the JSON route so these are some of the additional features that I
 - A modal that displays the results of the quiz along with a picture
 - A few transitions with the button hover and selection effects
 - A try again button to allow the user to take the quiz multiple times
+- Not necessarily extra credit but I score my answers based around the average score of 16-17. 
+In order to get an idea on how to score it I asked 30+ people to take my quiz and this seemed to be the average of what people got
+So that there would be more of an equal chance to each answer, I bell curved it around this average so some answers have some have a 
+few of the popular numbers while others have the a lot of the unpopular numbers. 
