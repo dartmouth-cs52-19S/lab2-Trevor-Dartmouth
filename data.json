@@ -3,7 +3,7 @@
     "icon": "icons/dartmouth-icon.ico",
     "questions": [
         {
-            "question_name": "question1",
+            "question_number": "1",
             "question_type": "image",
             "question_text": "Where do you get your food from in Foco?",
             "question_img_url": "images/menu.jpg",
@@ -31,7 +31,7 @@
             ]
         },
         {
-            "question_name": "question2",
+            "question_number": "2",
             "question_type": "text",
             "question_text": "Where is your favorite place to eat with friends?",
             "question_img_url": "images/friends.jpg",
@@ -55,7 +55,7 @@
             ]
         },
         {
-            "question_name": "question3",
+            "question_number": "3",
             "question_type": "image",
             "question_text": "What's your favorite thing in Collis?",
             "question_img_url": "images/cafe.jpg",
@@ -83,7 +83,7 @@
             ]
         },
         {
-            "question_name": "question4",
+            "question_number": "4",
             "question_type": "text",
             "question_text": "What is your go-to late night snack?",
             "question_img_url": "images/night.jpg",
@@ -107,7 +107,7 @@
             ]
         },
         {
-            "question_name": "question5",
+            "question_number": "5",
             "question_type": "image",
             "question_text": "What meal do you eat the most through DDS?",
             "question_img_url": "images/restaurant.jpg",
@@ -135,7 +135,7 @@
             ]
         },
         {
-            "question_name": "question6",
+            "question_number": "6",
             "question_type": "text",
             "question_text": "Where is your favorite place to eat breakfast?",
             "question_img_url": "images/breakfast-1.jpg",

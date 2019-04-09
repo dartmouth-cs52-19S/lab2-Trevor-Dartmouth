@@ -1,5 +1,25 @@
+/* load in html used help from https://stackoverflow.com/questions/12468374/make-jquery-function-run-on-page-load 
+* and http://cs52.me/assignments/lab/quizzical/
+*/
+$(document).ready(function() {
+    $.getJSON("data.json", function(data) {
+        var numberOfQuestions = 0;
+        var questions = data.questions;
+        for (var i = 0; i < questions.length; i++) {
+            if (questions[i].question_type === "image") {
+                addImageQuestion(questions[i], numberOfQuestions);
+            }
+            else if (questions[i].question_type === "text") {
+                addTextQuestion(questions[i], numberOfQuestions);
+            }
+            numberOfQuestions++;
+        }
+      });
+});
+function addImageQuestion(question, numberOfQuestions) {
+    
+}
 // Answer Values
-
 var answerScores = {
 
     Salad1: 1,
@@ -33,7 +53,24 @@ var answerScores = {
     None6: 1,
 };
 
-
+var answerText = {
+    Stacks: "The Stacks",
+    BEMA: "BEMA",
+    Hop: "Top of the Hop",
+    Yard: "50 Yard Line",
+    Hall: "Steps of Dartmouth Hall",
+    Green: "The Middle of the Green",
+    Lawn: "The Presidents Lawn"
+};
+var answerImage = {
+    Stacks: "images/the-stacks.jpg",
+    BEMA: "images/bema.jpg",
+    Hop: "images/top-of-the-hop.jpg",
+    Yard: "images/50-yard-line.jpg",
+    Hall: "images/dartmouth-hall.jpg",
+    Green: "images/green.jpg",
+    Lawn: "images/presidents-lawn.jpg"
+};
 
 $(".answer-image").on( "click", imageListener);
 $(".answer-text").on( "click", textListener);
@@ -41,7 +78,10 @@ $(".done-button").on("click", doneListener);
 
 $(".try-again").on("click", function(){
     if (($(".try-again").attr("finished")) === "true") {
-        window.location.href=window.location.href;
+        modal.css("display", "none");
+        location.reload(true);
+        location.href = "#top";
+
     }
     else {
          modal.css("display", "none");
@@ -50,16 +90,43 @@ $(".try-again").on("click", function(){
 });
 
 function imageListener(e) {
-    $('.answer-image input[type="radio"]:checked').parent().css("border", "0.1em solid var(--alt-color-2)");
-    $('.answer-image input[type="radio"]:not(:checked)').parent().css("border", "0.1em solid var(--alt-color-1)");
-
+    var labelClass = parseClass(e.currentTarget.classList.value);
+    $(this).css("border", "0.1em solid var(--white)");
+    $(this).css("opacity", "1");
+    $(labelClass).not(this).css("opacity", ".7");
+    $(labelClass).not(this).css("border", "0.1em solid var(--alt-color-1)");
+    goToNextQuestion(labelClass[labelClass.length-1]);
 }
 
 function textListener(e) {
-    $('.answer-text input[type="radio"]:checked').parent().css("background-color", "var(--alt-color-2)");
-    $('.answer-text input[type="radio"]:not(:checked)').parent().css("background-color", "var(--dominant-color)");
+    var labelClass = parseClass(e.currentTarget.classList.value);
+    $(this).css("background-color", "var(--alt-color-2)");
+    $(this).css("opacity", "1");
+    $(labelClass).not(this).css("opacity", ".7");
+    $(labelClass).not(this).css("background-color", "var(--dominant-color)");
+    goToNextQuestion(labelClass[labelClass.length-1]);
 }
 
+function parseClass(classes) {
+    var classList = classes.split(" ");
+    var parsedClass = "";
+    for (var i = 0; i < classList.length; i++) {
+        parsedClass += "." + classList[i];
+    }
+    return parsedClass;
+
+}
+
+function goToNextQuestion(questionNum) {
+    if (questionNum < $(".question").length) {
+        var nextQuestion = "#q" + (Number(questionNum) + 1);
+        location.href= nextQuestion;
+    }
+    else {
+        location.href = "#finish";
+    }
+   
+}
 /** 
     Used answer 2 from https://stackoverflow.com/questions/4309144/how-to-get-multiple-selected-radio-buttons-value-using-jquery
     to find all values of checked boxes
@@ -69,7 +136,8 @@ function doneListener(e) {
     var result = determineResults(values);
     if (result !== null) {
         $(".modal-header h2").text("Based off your DDS choices, the 7 you are most like is...");
-        $(".modal-body p").text(result);
+        $(".modal-body").append("<img src=" + answerImage[result] + ">");
+        $(".modal-body").append("<p>" + answerText[result] + "</p>");
         $(".try-again").text("Try Again");
         $(".try-again").attr("finished", true);
     }
@@ -85,20 +153,20 @@ function determineResults(values) {
     if ($(".question").length === values.length) {
         var sum = findTotalScore(values);
         switch (true) {
-            case (sum < 7):
-                return "The Stacks";
             case (sum < 10):
+                return "Stacks";
+            case (sum < 12):
                 return "BEMA";
-            case (sum < 13):
-                return "Top of the Hop";
+            case (sum < 14):
+                return "Hop";
             case (sum < 16):
-                return "50 Yard Line";
-            case (sum < 19):
-                return "Steps of Dartmouth Hall";
-            case (sum < 21):
-                return "Middle of the Green";
+                return "Yard";
+            case (sum < 18):
+                return "Hall";
+            case (sum < 20):
+                return "Green";
             case (sum < 25):
-                return "President's Lawn";
+                return "Lawn";
             default: 
                 return null;
         }
@@ -137,6 +205,6 @@ window.addEventListener("click", function(event) {
       }
 });
 
-//TODO: Error Checking
+//TODO: Image answer | JSON
 
 

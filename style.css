@@ -95,6 +95,9 @@ body {
     width: 25%;
     height: 90%;
 }
+.answer-image:hover {
+    border: 0.1em solid var(--white) !important; 
+} 
 
 .answer-image img { 
     border-color: var(--alt-color-1);
@@ -132,7 +135,7 @@ input[type="radio"] {
     height: 60%;
 }
 .answer-text:hover {
-    background-color: var(--alt-color-2);
+    background-color: var(--alt-color-2) !important;
 }
 .question.question-1 {
     background-image: url(images/menu.jpg);
@@ -193,7 +196,7 @@ input[type="radio"] {
     display: none;
     position: fixed;
     z-index: 10;
-    padding-top: 10%;
+    padding-top: 5%;
     left: 0;
     top: 0;
     width: 100%;
@@ -249,12 +252,18 @@ input[type="radio"] {
 .modal-body {
     display: flex;
     flex-basis: 60%;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 2px 16px;
 }
 .modal-body p {
-    font-size: 3vw;
+    font-size: 4vw;
+}
+.modal-body img {
+    width: 40%;
+    margin-top: 3%;
+    height: 20%;
 }
   
 .modal-footer {
