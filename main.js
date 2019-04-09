@@ -220,6 +220,7 @@ function doneListener(e) {
         $(".try-again").text("Review Answers");
         $(".try-again").attr("finished", false);
     }
+    modal.css("display", "block");
 }
 
 function determineResults(values) {
@@ -262,9 +263,6 @@ var modal = $("#answerModal");
 
 /* adpated from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal2 */
 // When the user clicks the button, open the modal 
-$(".done-button").on("click", function () {
-    modal.css("display", "block");
-});
 
 $(".close").on("click", function () {
     modal.css("display", "none");
