@@ -166,8 +166,7 @@ input[type="radio"] {
 }
 
 
-/* adapted from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal2 */
-/* The Modal (background) */
+/* adapted modal structure and animation from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal2 */
 .modal {
     display: none;
     position: fixed;

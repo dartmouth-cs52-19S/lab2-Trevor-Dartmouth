@@ -220,7 +220,9 @@ function doneListener(e) {
         $(".try-again").text("Review Answers");
         $(".try-again").attr("finished", false);
     }
-    modal.css("display", "block");
+    //timeout before showing modal to allow the data within to load in without the user seeing
+    setTimeout(function(){ modal.css("display", "block"); }, 150);
+  
 }
 
 function determineResults(values) {
